@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/admin/dashboard/page": "/admin/dashboard",
+  "/admin/page": "/admin",
+  "/api/[collection]/route": "/api/[collection]",
+  "/api/auth/setup/route": "/api/auth/setup",
+  "/api/whatsapp/route": "/api/whatsapp",
+  "/blog/%5Bid%5D/page": "/blog/%5Bid%5D",
+  "/blog/page": "/blog",
+  "/book/page": "/book",
+  "/gallery/page": "/gallery",
+  "/page": "/",
+  "/services/page": "/services"
+}

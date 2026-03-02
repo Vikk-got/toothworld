@@ -1,7 +1,10 @@
+"use client";
+
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Stethoscope } from "lucide-react";
-import fav from "../../public/favicon.ico"
+
 const navItems = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
@@ -13,20 +16,16 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl flex items-center justify-center animate-pulse-soft overflow-hidden">
-              <img
-                src={fav}
-                alt="Tooth World Logo"
-                className="w-full h-full object-contain"
-              />
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center animate-pulse-soft overflow-hidden background-primary">
+              <Stethoscope className="w-5 h-5 text-white" />
             </div>
 
             <span className="font-bold text-lg" style={{ fontFamily: "'DM Serif Display', serif", color: "hsl(var(--primary))" }}>
@@ -39,8 +38,8 @@ export default function Navbar() {
             {navItems.map((item) => (
               <Link
                 key={item.to}
-                to={item.to}
-                className={`nav-link ${location.pathname === item.to ? "active" : ""}`}
+                href={item.to}
+                className={`nav-link ${pathname === item.to ? "active" : ""}`}
               >
                 {item.label}
               </Link>
@@ -49,10 +48,10 @@ export default function Navbar() {
 
           {/* CTA + Admin */}
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/admin" className="nav-link text-xs uppercase tracking-wider">
+            <Link href="/admin" className={`nav-link text-xs uppercase tracking-wider ${pathname?.startsWith('/admin') ? 'active' : ''}`}>
               Admin
             </Link>
-            <Link to="/book" className="btn-primary text-xs px-5 py-2.5">
+            <Link href="/book" className="btn-primary text-xs px-5 py-2.5">
               Book Now
             </Link>
           </div>
@@ -74,7 +73,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <Link
               key={item.to}
-              to={item.to}
+              href={item.to}
               className="block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors"
               style={{ color: "hsl(var(--foreground) / 0.8)" }}
               onClick={() => setOpen(false)}
@@ -83,12 +82,12 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-2 border-t border-border flex flex-col gap-2">
-            <Link to="/admin" className="block px-4 py-2.5 rounded-xl text-sm font-medium"
+            <Link href="/admin" className="block px-4 py-2.5 rounded-xl text-sm font-medium"
               style={{ color: "hsl(var(--muted-foreground))" }}
               onClick={() => setOpen(false)}>
               Admin Portal
             </Link>
-            <Link to="/book" className="btn-primary text-center" onClick={() => setOpen(false)}>
+            <Link href="/book" className="btn-primary text-center" onClick={() => setOpen(false)}>
               Book Appointment
             </Link>
           </div>

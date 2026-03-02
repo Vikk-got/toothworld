@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Stethoscope, Phone, MapPin, Mail, Clock } from "lucide-react";
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[["Home", "/"], ["Services", "/services"], ["About", "/about"], ["Gallery", "/gallery"], ["Book Appointment", "/book"], ["Blog", "/blog"]].map(([label, to]) => (
                 <li key={to}>
-                  <Link to={to} className="text-sm hover:text-white transition-colors">
+                  <Link href={to} className="text-sm hover:text-white transition-colors">
                     {label}
                   </Link>
                 </li>

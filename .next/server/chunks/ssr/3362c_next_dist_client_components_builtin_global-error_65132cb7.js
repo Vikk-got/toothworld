@@ -1,0 +1,3 @@
+module.exports=[77464,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(28076);a.n(d("[project]/Desktop/smile-schedule-dash/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},63311,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(28076);a.n(d("[project]/Desktop/smile-schedule-dash/node_modules/next/dist/client/components/builtin/global-error.js"))},7319,a=>{"use strict";a.i(77464);var b=a.i(63311);a.n(b)}];
+
+//# sourceMappingURL=3362c_next_dist_client_components_builtin_global-error_65132cb7.js.map
