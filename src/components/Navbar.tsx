@@ -49,9 +49,6 @@ export default function Navbar() {
 
           {/* CTA + Admin */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/admin" className={`nav-link text-xs uppercase tracking-wider ${pathname?.startsWith('/admin') ? 'active' : ''}`}>
-              Admin
-            </Link>
             <Link href="/book" className="btn-primary text-xs px-5 py-2.5">
               Book Now
             </Link>
