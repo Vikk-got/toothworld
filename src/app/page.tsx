@@ -22,9 +22,9 @@ const stats = [
 ];
 
 const testimonials = [
-    { name: "Sarah Johnson", text: "The best dental experience I've ever had! Dr. Smith is so gentle and professional.", rating: 5, role: "Patient since 2021" },
-    { name: "Michael Chen", text: "My teeth whitening results are incredible. Everyone keeps asking about my smile!", rating: 5, role: "Patient since 2022" },
-    { name: "Emily Davis", text: "I used to be afraid of dentists, but the whole team made me feel completely at ease.", rating: 5, role: "Patient since 2023" },
+    { name: "nikhil garg", text: "The best dental experience I've ever had! Dr. Smith is so gentle and professional.", rating: 5, role: "Patient since 2021" },
+    { name: "abhishek singh", text: "My teeth whitening results are incredible. Everyone keeps asking about my smile!", rating: 5, role: "Patient since 2022" },
+    { name: "nikki singh", text: "I used to be afraid of dentists, but the whole team made me feel completely at ease.", rating: 5, role: "Patient since 2023" },
 ];
 
 const whyUs = [
